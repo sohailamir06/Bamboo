@@ -40,9 +40,16 @@ const KontaktPage = () => {
         </div>
       </section>
 
-      {/* Contact Info Section - Exact from screenshot */}
-      <section className="bg-[#1a1a1a] py-20 md:py-28 lg:py-32 bg-gradient-bambuam">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Contact Info Section - Split Background Implementation */}
+      <section className="relative overflow-hidden">
+        {/* Background Layers */}
+        <div className="absolute inset-0 flex">
+          <div className="w-[60%] h-full bg-gradient-bambuam"></div>
+          <div className="w-[40%] h-full bg-[#1a1a1a]"></div>
+        </div>
+
+        {/* Content Layer */}
+        <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             
             {/* Left Content - Exact from screenshot */}
@@ -54,7 +61,7 @@ const KontaktPage = () => {
               </h2>
 
               {/* Divider line */}
-              <hr className="border-t border-[#e8e5e5] mb-8" />
+              <hr className="border-t border-[#e8e5e5]/20 mb-8" />
 
               {/* Description paragraph */}
               <p className="text-[#b0b0b0] text-base leading-relaxed mb-12">
@@ -64,11 +71,11 @@ const KontaktPage = () => {
               </p>
 
               {/* Profile Card - Exact layout from screenshot */}
-              <div className="flex items-start gap-8">
+              <div className="flex flex-col sm:flex-row items-start gap-8">
                 {/* Profile Image */}
                 <div className="flex-shrink-0">
                   <img
-                  src={img3}
+                    src={img3}
                     alt="Andi Besenbeck"
                     className="w-32 h-40 object-cover rounded-lg"
                   />
@@ -95,11 +102,11 @@ const KontaktPage = () => {
             </div>
 
             {/* Right Image - Large bamboo image */}
-            <div className="flex justify-end">
+            <div className="flex justify-end lg:pr-8">
               <img
                 src={img2}
                 alt="Bamboo"
-                className="w-full max-w-[550px] h-[600px] object-cover rounded-lg"
+                className="w-full max-w-[550px] h-[600px] object-cover rounded-lg shadow-2xl"
               />
             </div>
           </div>
