@@ -29,60 +29,56 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section className="bg-bambuam-dark/95 text-white py-28 px-6">
+    <section className="bg-bambuam-dark text-white section-padding-lg">
       
       {/* Header */}
-      <div className="max-w-7xl mx-auto px-4 text-center mb-16">
-        <p className="text-white font-serif leading-relaxed text-2xl md:text-3xl lg:text-4xl">
+      <div className="container-site text-center mb-16">
+        <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed max-w-5xl mx-auto">
           This is what it looks like at our customers' homes now. Our bamboo decking transforms patios into true oases of well-being. Here's a look at{" "}
-          <span className="italic text-italic-accent">
+          <span className="text-italic-accent">
             how our customers have designed their outdoor spaces sustainably and personally with Bambuam.
           </span>
         </p>
       </div>
 
       {/* Grid */}
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        {items.map((item, i) => (
-          <div
-            key={i}
-            className="group border border-[#8a7a4a]/40 border-[#c6b37a] transition-all duration-300"
-          >
-            
-            {/* Image */}
-            <div className="overflow-hidden">
-              <img
-                src={item.img}
-                alt=""
-                className="w-full h-[260px] object-cover 
-                           transition-transform duration-700 ease-out
-                           group-hover:scale-110"
-              />
-            </div>
+      <div className="container-site">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {items.map((item, i) => (
+            <article
+              key={i}
+              className="group card-dark overflow-hidden"
+            >
+              {/* Image */}
+              <div className="img-zoom">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-[220px] object-cover"
+                />
+              </div>
 
-            {/* Content */}
-            <div className=" p-6">
-              <h3 className="text-lg font-semibold mb-3 leading-snug">
-                {item.title}
-              </h3>
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="text-lg font-semibold mb-3 leading-snug text-white">
+                  {item.title}
+                </h3>
 
-              <p className="text-white text-md leading-relaxed">
-                {item.desc}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
+                <p className="text-bambuam-text-secondary text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
 
-      {/* Button */}
-      <div className="text-center mt-16">
-        <button className="inline-flex items-center gap-2 
-                           bg-[#5f735c] hover:bg-[#6f876c] 
-                           px-8 py-3 text-sm rounded-md transition-all">
-          Enquire now
-          <ArrowRight className="w-4 h-4" />
-        </button>
+        {/* Button */}
+        <div className="text-center mt-12">
+          <button className="btn-primary group">
+            Enquire now
+            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </button>
+        </div>
       </div>
     </section>
   );

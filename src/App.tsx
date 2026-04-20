@@ -6,12 +6,13 @@ import HomePage from './pages/HomePage';
 import AboutUs from './pages/AboutUs';
 import KontaktPage from './pages/KontaktPage';
 import ServicesPage from './pages/ServicesPage';
+import ExperienceBamboo from './pages/ExperienceBamboo';
 
 function App() {
   useEffect(() => {
     // Scroll animation observer
     const observerOptions = {
-      threshold: 0.2,
+      threshold: 0.1,
       rootMargin: '0px 0px -50px 0px',
     };
 
@@ -39,6 +40,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/services-page" element={<ServicesPage />} />
+            <Route path="/experience-bamboo" element={<ExperienceBamboo />} />
             <Route path="/kontakt" element={<KontaktPage />} />
           </Routes>
         </main>

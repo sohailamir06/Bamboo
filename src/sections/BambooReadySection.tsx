@@ -6,7 +6,7 @@ const BambooReadySection = () => {
     <section className="bg-bambuam-dark section-padding" style={{ background: 'linear-gradient(98.9deg, #111111 0%, #1E241E 62.5%, #242C24 100%)' }} >
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-12 scroll-animate">
+        <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-light text-white mb-5">
             Ready for your own{' '}
             <span className="italic text-italic-accent">bamboo project?</span>

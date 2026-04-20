@@ -21,7 +21,7 @@ const Footer = () => {
     <footer className="bg-bambuam-dark border-bambuam-border">
       {/* Main Footer */}
       <div className="section-padding pb-8">
-        <div className="container-custom">
+        <div className="container-custom max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1.5fr] gap-12 mb-12">
 
             {/* Brand Column (LARGE) */}

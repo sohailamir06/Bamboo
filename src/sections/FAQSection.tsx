@@ -13,12 +13,12 @@ const FAQSection = () => {
     {
       question: 'Is bamboo more sustainable than wood?',
       answer:
-        'Definitely. Bamboo grows incredibly fast, stores a lot of CO₂, and doesn\'t need pesticides. This makes it one of the most sustainable alternatives to tropical and hardwoods.',
+        "Definitely. Bamboo grows incredibly fast, stores a lot of CO₂, and doesn't need pesticides. This makes it one of the most sustainable alternatives to tropical and hardwoods.",
     },
     {
       question: 'How do I care for my bamboo terrace?',
       answer:
-        'It\'s very simple: sweep regularly, clean occasionally. If desired, oil once a year – or let the patio weather naturally to a grey patina. The surface can be lightly brushed if needed.',
+        "It's very simple: sweep regularly, clean occasionally. If desired, oil once a year – or let the patio weather naturally to a grey patina. The surface can be lightly brushed if needed.",
     },
     {
       question: 'How long does a bamboo terrace last?',
@@ -28,17 +28,18 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="section-padding" style={{ background: 'linear-gradient(98.9deg, #111111 0%, #1E241E 62.5%, #242C24 100%)' }}>
-      <div className="container-custom">
-        <div className="text-center mb-12 scroll-animate">
-          <h2 className="text-2xl md:text-3xl font-light text-white mb-5">
+    <section className="section-padding bg-gradient-bambuam">
+      <div className="container-site">
+        <div className="text-center mb-12">
+          <h2 className="heading-section text-white max-w-4xl mx-auto">
             Are you looking for a durable, sustainable bamboo terrace that feels good and{' '}
-            <span className="italic text-italic-accent">will bring you joy for many years?</span>
+            <span className="text-italic-accent">will bring you joy for many years?</span>
           </h2>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Left - Questions */}
-          <div className="scroll-animate">
+          <div>
             <div className="space-y-0">
               {faqs.map((faq, index) => (
                 <button
@@ -48,11 +49,11 @@ const FAQSection = () => {
                     activeIndex === index ? 'text-white' : 'text-white/70 hover:text-white'
                   }`}
                 >
-                  <span className="text-lg pr-4">{faq.question}</span>
+                  <span className="text-base md:text-lg pr-4 font-medium">{faq.question}</span>
                   {activeIndex === index ? (
-                    <ChevronRight className="w-5 h-5 flex-shrink-0 rotate-90 transition-transform" />
+                    <ChevronRight className="w-5 h-5 flex-shrink-0 rotate-90 transition-transform duration-300" />
                   ) : (
-                    <Plus className="w-5 h-5 flex-shrink-0 transition-transform group-hover:rotate-90" />
+                    <Plus className="w-5 h-5 flex-shrink-0 transition-transform duration-300 group-hover:rotate-90" />
                   )}
                 </button>
               ))}
@@ -60,20 +61,17 @@ const FAQSection = () => {
           </div>
 
           {/* Right - Answer Display */}
-          <div
-            className="scroll-animate lg:pl-8"
-            style={{ transitionDelay: '200ms' }}
-          >
-            <div className="rounded-lg min-h-[300px]">
+          <div className="lg:pl-8">
+            <div className="min-h-[200px] flex items-center">
               {activeIndex !== null ? (
                 <div className="animate-fade-in">
-                  <p className="text-bambuam-text-muted leading-relaxed">
+                  <p className="text-bambuam-text-secondary body-text-lg">
                     {faqs[activeIndex].answer}
                   </p>
                 </div>
               ) : (
-                <div className="h-full flex items-center justify-center text-bambuam-text-muted">
-                  <p>Wähle eine Frage aus, um die Antwort zu sehen.</p>
+                <div className="text-bambuam-text-secondary">
+                  <p>Select a question to see the answer.</p>
                 </div>
               )}
             </div>

@@ -1,5 +1,4 @@
 import { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import p1 from '../assets/productservice/100.jpg';
 import p2 from '../assets/productservice/101.jpg';
@@ -27,19 +26,19 @@ const ProductsCarousel = () => {
     {
       id: 3,
       name: 'Pad holder for telescopic handle',
-      price: '€19,90',
+      price: '€19.90',
       image: p3,
     },
     {
       id: 4,
       name: 'Oil sponge',
-      price: '€9,90',
+      price: '€9.90',
       image: p4,
     },
     {
       id: 5,
       name: 'Silicon brush',
-      price: '€69,90',
+      price: '€69.90',
       image: p5,
     },
   ];
@@ -67,15 +66,15 @@ const ProductsCarousel = () => {
   };
 
   return (
-    <section className="bg-bambuam-dark section-padding">
-      <div className="container-custom">
+    <section className="bg-bambuam-dark section-padding-lg">
+      <div className="container-site">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-light text-white mb-5">
+          <h2 className="heading-section text-white mb-5">
             At Bambuam you can get everything{' '}
-            <span className="italic text-italic-accent">for your terrace.</span>
+            <span className="text-italic-accent">for your terrace.</span>
           </h2>
-          <p className="text-bambuam-text-muted max-w-3xl mx-auto">
+          <p className="text-bambuam-text-secondary max-w-3xl mx-auto body-text">
             Bamboo decking, substructures, fastening & care – coordinated, tested & with personal advice.
           </p>
         </div>
@@ -99,51 +98,46 @@ const ProductsCarousel = () => {
             <ChevronRight className="w-6 h-6" />
           </button>
 
-          {/* Carousel Container */}
+          {/* Carousel Track */}
           <div
             ref={carouselRef}
-            className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4 max-w-7xl mx-auto"
+            className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 px-2"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {products.map((product) => (
               <div
                 key={product.id}
-                className="flex-shrink-0 w-80 snap-start"
+                className="flex-shrink-0 w-[280px] md:w-[300px] card-dark overflow-hidden group"
               >
-                <div className="bg-white rounded-lg overflow-hidden card-hover">
-                  {/* Product Image */}
-                  <div className="aspect-square bg-gray-100">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-
-                  {/* Product Info */}
-                  <div className="p-4 bg-bambuam-darker text-center h-32">
-                    <h3 className="text-white text-md font-semibold line-clamp-2 mb-5">
-                      {product.name}
-                    </h3>
-                    <p className="text-bambuam-green font-semibold">
-                      {product.price}
-                    </p>
-                  </div>
+                <div className="img-zoom">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-[200px] object-cover"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-white font-medium mb-3 text-sm leading-snug">
+                    {product.name}
+                  </h3>
+                  <p className="text-bambuam-sage text-lg font-semibold">
+                    {product.price}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-12 scroll-animate flex items-center justify-center" style={{ transitionDelay: '400ms' }}>
-          <Link
-            to="/kontakt"
-            className="bg-[#415540]/85 backdrop-blur-md text-white px-6 py-3 rounded-lg hover:bg-[#415540] transition flex items-center justify-center"
+        {/* CTA Button */}
+        <div className="text-center mt-12">
+          <a
+            href="mailto:office@bambuam.at"
+            className="btn-primary group"
           >
-            Inquire now!
-            <ArrowRight className="w-5 h-5 ml-3" />
-          </Link>
+            Inquire now
+            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </a>
         </div>
       </div>
     </section>

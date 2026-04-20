@@ -48,19 +48,44 @@ module.exports = {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Custom Bambuam colors
+        // Bambuam Design System - Matching original website
         bambuam: {
+          // Background colors
           dark: '#1a1a1a',
           darker: '#2d2d2d',
+          'dark-card': 'rgba(45, 45, 45, 0.8)',
+          // Primary green (from original)
           green: '#4a6741',
-          'green-hover': '#5a7751',
-          'text-muted': '#b0b0b0',
-          'text-italic': '#8a9a7f',
+          'green-light': '#5a7751',
+          'green-dark': '#3d5636',
+          // Accent colors
+          sage: '#8a9a7f',
+          'sage-light': '#a8b89d',
+          // Text colors
+          'text-primary': '#ffffff',
+          'text-secondary': '#b0b0b0',
+          'text-muted': '#9a9a9a',
+          // Border colors
           border: '#3a3a3a',
+          'border-light': '#4a4a4a',
+          // Gradient backgrounds
+          'gradient-start': '#111111',
+          'gradient-mid': '#1E241E',
+          'gradient-end': '#242C24',
         },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
+      },
+      fontSize: {
+        'display': ['3.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+        'heading-1': ['2.5rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+        'heading-2': ['2rem', { lineHeight: '1.3' }],
+        'heading-3': ['1.5rem', { lineHeight: '1.4' }],
+        'body-lg': ['1.125rem', { lineHeight: '1.7' }],
+        'body': ['1rem', { lineHeight: '1.7' }],
+        'body-sm': ['0.875rem', { lineHeight: '1.6' }],
       },
       borderRadius: {
         xl: "calc(var(--radius) + 4px)",

@@ -21,24 +21,21 @@ const AboutSection = () => {
   const images = [img1, img2];
 
   return (
-    <section className="bg-bambuam-dark/95 py-20 min-h-[80vh]">
-      <div className="max-w-8xl mx-80 px-4">
-
+    <section className="bg-bambuam-dark section-padding">
+      <div className="container-site">
         {/* HEADING */}
-        <h2 className="text-3xl lg:text-4xl text-white font-semibold leading-tight mb-10">
-          <span className="italic text-italic-accent">
+        <h2 className="heading-section text-white mb-10 max-w-4xl">
+          <span className="text-italic-accent">
             The perfect bamboo terrace –
           </span>{' '}
           sustainable, durable & with personal advice
         </h2>
 
-        <div className="grid lg:grid-cols-[2.5fr_1fr] gap-10 pt-10">
+        <div className="grid lg:grid-cols-[2fr_1fr] gap-10 lg:gap-16 pt-8">
 
           {/* LEFT SIDE (BIGGER) */}
           <div>
-
-            <div className="grid md:grid-cols-2 gap-10 text-[#cfcfcf] text-lg leading-relaxed">
-
+            <div className="grid md:grid-cols-2 gap-8 text-bambuam-text-secondary body-text">
               <p>
                 Bamboo is the perfect choice for your patio: extremely robust, weather-resistant, and sustainable.
                 With{' '}
@@ -52,29 +49,26 @@ const AboutSection = () => {
                 I'll guide you with honest advice and genuine expertise – ensuring your project is a success and you can be proud of the result.
                 Whether you're building a new home or renovating, with the right materials and clear tips, constructing your bamboo terrace will be an experience you'll enjoy for years to come.
               </p>
-
             </div>
 
             <Link
-              to="/uber-uns"
-              className="inline-flex items-center gap-3 mt-10 px-6 py-3 rounded-lg bg-[#415540]/90 hover:bg-[#415540] text-white transition"
+              to="/about-us"
+              className="btn-secondary mt-10 group"
             >
               Learn more about me!
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
-
           </div>
 
           {/* RIGHT SIDE (SMALLER) */}
           <div className="flex justify-center lg:justify-end">
-            <div className="w-[340px] lg:w-[380px]">
-
+            <div className="w-full max-w-[380px]">
               <Swiper
                 modules={[Pagination, Autoplay, EffectFade]}
                 effect="fade"
                 fadeEffect={{ crossFade: true }}
                 autoplay={{
-                  delay: 3000,
+                  delay: 4000,
                   disableOnInteraction: false,
                   pauseOnMouseEnter: true,
                 }}
@@ -82,22 +76,20 @@ const AboutSection = () => {
                 loop={true}
                 pagination={{ clickable: true }}
                 slidesPerView={1}
-                className="rounded-md overflow-hidden"
+                className="rounded-lg overflow-hidden"
               >
                 {images.map((img, index) => (
                   <SwiperSlide key={index}>
                     <img
                       src={img}
                       alt="Bamboo decking"
-                      className="w-full h-[520px] object-cover"
+                      className="w-full h-[400px] lg:h-[520px] object-cover"
                     />
                   </SwiperSlide>
                 ))}
               </Swiper>
-              
             </div>
           </div>
-
         </div>
       </div>
     </section>

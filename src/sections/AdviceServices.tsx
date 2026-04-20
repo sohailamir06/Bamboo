@@ -2,7 +2,7 @@
 const AdviceServices = () => {
   return (
     <section className="bg-bambuam-dark section-padding">
-      <div className="container-custom">
+      <div className="container-custom max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-light text-white mb-5">

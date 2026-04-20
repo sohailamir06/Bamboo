@@ -3,32 +3,34 @@ import { ArrowRight } from 'lucide-react';
 
 const ContactCTA = () => {
   return (
-    <section className="bg-bambuam-dark section-padding">
-      <div className="container-custom">
+    <section className="bg-bambuam-dark section-padding-lg">
+      <div className="container-site">
         {/* Header */}
-        <div className="text-center mb-12 scroll-animate">
-          <h2 className="text-2xl md:text-3xl font-light text-white mb-5">
+        <div className="text-center mb-12">
+          <h2 className="heading-section text-white max-w-4xl mx-auto">
             Are you looking for a durable, sustainable bamboo terrace that feels good and{' '}
-            <span className="italic text-italic-accent">will bring you joy for many years?</span>
+            <span className="text-italic-accent">will bring you joy for many years?</span>
           </h2>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-4xl mx-auto">
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
           {/* Left Content */}
-          <div className="">
-            <p className="text-bambuam-text-muted leading-relaxed mb-20">
+          <div>
+            <p className="text-bambuam-text-secondary body-text mb-8">
               It will arrive quickly – so you can soon enjoy your own piece of nature.
             </p>
+            
             <Link
               to="/kontakt"
-              className="w-[380px] bg-[#415540]/85 backdrop-blur-md text-white px-4 py-3 rounded-lg hover:bg-[#415540] flex items-center transition"
+              className="btn-primary group"
             >
               Request a quote now with no obligation!
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1 ml-3" />
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </div>
 
           {/* Right Content - Info Card */}
-          <div className="space-y-4 text-bambuam-text-muted">
+          <div className="text-bambuam-text-secondary body-text">
             <p>
               Let's plan your project together – honestly, straightforwardly, and precisely tailored to your needs. Whether you need advice, a sample viewing, or concrete implementation: I'm personally there for you.
             </p>
