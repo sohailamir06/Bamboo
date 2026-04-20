@@ -1,6 +1,7 @@
 import ExperienceSection from '../sections/ExperienceSection';
 import ExperienceAdviceSection from '@/sections/ExperienceAdviceSection';
 import JourneySlider from '@/sections/JourneySlider';
+import SampleTerraceSection from '@/sections/SampleTerraceSection';
 
 
 const ExperienceBamboo = () => {
@@ -9,6 +10,7 @@ const ExperienceBamboo = () => {
       <ExperienceSection />
       <ExperienceAdviceSection />
       <JourneySlider />
+      <SampleTerraceSection />
     </>
   );
 };
