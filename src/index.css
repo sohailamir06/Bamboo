@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 100 20% 32%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 100 20% 32%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 23%;
+    --input: 0 0% 23%;
+    --ring: 100 20% 32%;
+    --radius: 0.5rem;
+    
+    --color-primary: #1a1a1a;
+    --color-secondary: #2d2d2d;
+    --color-accent: #4a6741;
+    --color-accent-hover: #5a7751;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #b0b0b0;
+    --color-text-italic: #8a9a7f;
+    --color-border: #3a3a3a;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#1a1a1a] text-white font-sans antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-italic-accent {
+    color: #8a9a7f;
+    font-style: italic;
+  }
+  
+  .bg-dark-primary {
+    background-color: #1a1a1a;
+  }
+  
+  .bg-dark-secondary {
+    background-color: #2d2d2d;
+  }
+  
+  .bg-dark-card {
+    background-color: rgba(45, 45, 45, 0.8);
+  }
+  
+  .text-muted-custom {
+    color: #b0b0b0;
+  }
+  
+  .border-custom {
+    border-color: #3a3a3a;
+  }
+  
+  .btn-primary {
+    @apply bg-[#4a6741] text-white px-6 py-3 rounded-full font-medium transition-all duration-200;
+  }
+  
+  .btn-primary:hover {
+    @apply bg-[#5a7751] -translate-y-0.5;
+    box-shadow: 0 4px 12px rgba(74, 103, 65, 0.3);
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24 px-4 sm:px-6 lg:px-8 xl:px-12;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a4a4a;
+}
+
+/* Animation utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+
+/* Initial state for scroll animations */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-animate.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero parallax */
+.hero-parallax {
+  will-change: transform;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Link underline animation */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Navigation glass effect */
+.nav-glass {
+  background-color: transparent;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.nav-glass.scrolled {
+  background-color: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+/* Social icon hover */
+.social-icon {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Accordion styles */
+.accordion-content {
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+/* Carousel styles */
+.carousel-slide {
+  transition: transform 0.4s ease;
+}
+
+/* Timeline styles */
+.timeline-dot {
+  @apply w-4 h-4 rounded-full border-2 border-[#4a6741] bg-transparent;
+}
+
+.timeline-dot.active {
+  @apply bg-[#4a6741];
+}
+
+/* Form input styles */
+input, textarea {
+  @apply bg-[#2d2d2d] border border-[#3a3a3a] rounded-lg px-4 py-3 text-white placeholder:text-[#666] focus:outline-none focus:border-[#4a6741] focus:ring-1 focus:ring-[#4a6741] transition-colors;
+}
+
+/* Center dots below slider */
+.swiper-pagination {
+  margin-top: 14px;
+  position: relative !important;
+  text-align: center;
+}
+
+/* Default dots */
+.swiper-pagination-bullet {
+  background: #888 !important;
+  opacity: 1;
+  width: 6px;
+  height: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Active pill effect */
+.swiper-pagination-bullet-active {
+  width: 26px;
+  height: 6px;
+  border-radius: 10px;
+  background: #dcdcdc !important;
+}
