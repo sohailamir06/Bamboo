@@ -1,13 +1,14 @@
-import Hero from '../sections/Hero';
-import AboutSection from '../sections/AboutSection';
-import ServicesSection from '../sections/ServicesSection';
-import QuoteSection from '../sections/QuoteSection';
-import ProductsCarousel from '../sections/ProductsCarousel';
-import ContactCTA from '../sections/ContactCTA';
-import FAQSection from '../sections/FAQSection';
-import ProjectsSection from '../sections/ProjectsSection';
-import StorySection from '../sections/StorySection';
-import TerraceSection from '../sections/TerraceSection';
+import Hero from '../components/sections/home/Hero';
+import AboutSection from '../components/sections/home/AboutSection';
+import ServicesSection from '../components/sections/home/ServicesSection';
+import QuoteSection from '../components/sections/shared/QuoteSection';
+import ContactCTA from '../components/sections/shared/ContactCTA';
+import ProductsCarousel from '../components/sections/shared/ProductsCarousel';
+import FAQSection from '../components/sections/shared/FAQSection';
+import ProjectsSection from '../components/sections/home/ProjectsSection';
+import StorySection from '../components/sections/home/StorySection';
+import TerraceSection from '../components/sections/home/TerraceSection';
+import { PRODUCTS_HOME_CONTENT } from '../data/home';
 
 const HomePage = () => {
   return (
@@ -18,7 +19,9 @@ const HomePage = () => {
       <QuoteSection />
       <ProjectsSection />
       <StorySection />
-      <ProductsCarousel />
+      <ProductsCarousel 
+        {...PRODUCTS_HOME_CONTENT}
+      />
       <TerraceSection />
       <ContactCTA />
       <FAQSection />
