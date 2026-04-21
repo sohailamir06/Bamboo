@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import img from "../assets/kontakt-page-banner.jpg";
 import img2 from "../assets/productservice/image.jpg";
-import img3 from "../assets/projectimages/107.jpg";
+import img3 from "../assets/productservice/115-768x616.jpg";
 
 const KontaktPage = () => {
   const [, setIsLoaded] = useState(false);
