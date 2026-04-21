@@ -5,6 +5,8 @@ import SampleTerraceSection from '@/sections/SampleTerraceSection';
 import ExperienceYourself from '@/sections/ExperienceYourself'; 
 import RealRelationships from '@/sections/RealRelationships';
 import BambooGrows from '@/sections/BambooGrows';
+import BambooCare from '@/sections/BambooCare';
+import VideoSection from '@/sections/VideoSection';
 
 const ExperienceBamboo = () => {
   return (
@@ -16,6 +18,8 @@ const ExperienceBamboo = () => {
       <ExperienceYourself />
       <RealRelationships />
       <BambooGrows />
+      <BambooCare />
+      <VideoSection />
     </>
   );
 };
