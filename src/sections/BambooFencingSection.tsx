@@ -1,7 +1,7 @@
-import img1 from "../assets/Projectimages/131.jpg";
-import img2 from "../assets/Projectimages/132.jpg";
-import img3 from "../assets/Projectimages/133.jpg";
-import img4 from "../assets/Projectimages/134.jpg";
+import img1 from "../assets/projectimages/131.jpg";
+import img2 from "../assets/projectimages/132.jpg";
+import img3 from "../assets/projectimages/133.jpg";
+import img4 from "../assets/projectimages/134.jpg";
 import { ArrowRight } from "lucide-react";
 
 export default function BambooFencingSection() {

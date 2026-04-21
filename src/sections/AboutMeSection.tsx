@@ -1,4 +1,4 @@
-import profileImage from '../assets/Projectimages/image-a-1.jpg';
+import profileImage from '../assets/projectimages/image-a-1.jpg';
 import bambooImage from '../assets/productservice/image.jpg';
 
 
