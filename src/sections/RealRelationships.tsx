@@ -7,7 +7,6 @@ import img6 from "../assets/images/132.jpg";
 import img7 from "../assets/images/133.jpg";
 import img8 from "../assets/images/134.jpg";
 
-import { ArrowRight } from "lucide-react";
 
 export default function RealRelationships() {
   const images = [

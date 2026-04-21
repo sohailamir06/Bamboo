@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import p1 from '../assets/productservice/100.jpg';
 import p2 from '../assets/productservice/101.jpg';
 import p3 from '../assets/productservice/102.jpg';

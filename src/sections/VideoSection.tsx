@@ -1,5 +1,3 @@
-import React from "react";
-
 const VideoSection = () => {
   return (
     <section className="py-20 px-6 md:px-16" style={{ background: 'linear-gradient(98.9deg, #111111 0%, #1E241E 62.5%, #242C24 100%)' }}>
