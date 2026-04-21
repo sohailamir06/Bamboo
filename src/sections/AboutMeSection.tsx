@@ -1,5 +1,7 @@
-import profileImage from '../assets/projectimages/image-a-1.jpg';
+import profileImage from '../assets/images/image-a-1.jpg';
 import bambooImage from '../assets/productservice/image.jpg';
+
+
 
 
 const AboutMeSection = () => {

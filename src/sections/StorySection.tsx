@@ -1,7 +1,7 @@
-import img2 from "../assets/projectimages/107.jpg";
-import img3 from "../assets/projectimages/108.jpg";
-import img4 from "../assets/projectimages/109.jpg";
-import img1 from "../assets/projectimages/image-a-1.jpg";
+import img2 from "../assets/images/107.jpg";
+import img3 from "../assets/images/108.jpg";
+import img4 from "../assets/images/109.jpg";
+import img1 from "../assets/images/image-a-1.jpg";
 
 const StorySection = () => {
   return (
