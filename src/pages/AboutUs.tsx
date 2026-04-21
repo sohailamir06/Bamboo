@@ -5,6 +5,7 @@ import Timeline from "@/sections/TimeLine";
 import AboutusFixedBgSection from "@/sections/AboutusFixedBgSection";
 import QuickAccess from "@/sections/QuickAccess";
 import BambooPhilosophy from "@/sections/BambooPhilosophy";
+import AboutFAQ from "@/sections/AboutFAQ";
 
 
 const AboutUs = () => {
@@ -17,6 +18,7 @@ const AboutUs = () => {
       <AboutusFixedBgSection />
       <QuickAccess />
       <BambooPhilosophy />
+      <AboutFAQ />
     </>
   );
 };
