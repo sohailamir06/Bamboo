@@ -5,7 +5,7 @@ import img2 from "../assets/productservice/image.jpg"
 import img3 from "../assets/Projectimages/107.jpg"
 
 const KontaktPage = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);

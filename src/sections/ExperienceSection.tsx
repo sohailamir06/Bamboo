@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
-import { Facebook, Youtube, Instagram, Package, Handshake, Leaf, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useEffect, useState, useCallback } from 'react';
+import { Facebook, Youtube, Instagram } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import Sider1 from '../assets/Bambus-erleben-page-banner.jpg';
@@ -17,7 +17,7 @@ const ExperienceSection = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [contentKey, setContentKey] = useState(0);
 
-  const [emblaRef, emblaApi] = useEmblaCarousel(
+  const [, emblaApi] = useEmblaCarousel(
     { loop: true, duration: 30 },
     [Autoplay({ delay: 6000, stopOnInteraction: false })]
   );

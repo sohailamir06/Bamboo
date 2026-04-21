@@ -1,4 +1,3 @@
-import React from 'react';
 import FixedBgImage from "../assets/productservice/service-page-banner-1-1536x775.jpg";
 import profileImage from "../assets/productservice/image.jpg";
 // Note: You can use Lucide-React or Heroicons for the icons. 
